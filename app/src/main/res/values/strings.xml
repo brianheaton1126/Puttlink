@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">BLE Golf Ball</string>
+    <string name="title_activity_control">ControlActivity</string>
+
+    <string name="no_ble">BLE not supported</string>
+
+    <!-- Misc items -->
+    <string name="zero">0</string>
+    <string name="refreshText">Pull Down to Refresh</string>
+    <string name="numberofRolls">Number of Rolls</string>
+    <string name="rollDistance">Roll Distance </string>
+    <string name="BallVelocity">Battery</string>
+    <string name="accelerationX">Last Missed Putt</string>
+
+    <string name="puttsMade">Stimp</string>
+    <string name="bootload">Bootload</string>
+    <string name="battery">Battery</string>
+
+    <string name="readyState">Current State</string>
+
+    <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+</resources>

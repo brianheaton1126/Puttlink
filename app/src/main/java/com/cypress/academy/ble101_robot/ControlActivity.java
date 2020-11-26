@@ -116,6 +116,7 @@ public class ControlActivity extends AppCompatActivity {
     public static int playingBadReadingSound = 0;
     public static int puttMadeFlag = 0;
     public static int badReadingFlag = 0;
+    public static int ballStoppedFlag = 0;
 
 
 
@@ -316,12 +317,10 @@ public class ControlActivity extends AppCompatActivity {
                     mTachRightText.setText(String.format("%d", PSoCBleRobotService.getTach(PSoCBleRobotService.Motor.RIGHT)));
                     mTachMiddleText.setText(String.format("%d", PSoCBleRobotService.getTach(PSoCBleRobotService.Motor.MIDDLE)));
 
-                    int ballStoppedFlag =  PSoCBleRobotService.getTach(PSoCBleRobotService.Motor.MIDDLE);
 
 
-                    if (ballStoppedFlag == 1){
-                        playingSoundStroke = 0;
-                    }
+
+
 
                     double longestMadeDistance = (double) PSoCBleRobotService.getTach(PSoCBleRobotService.Motor.BOTTOM)/10.0;
                     double longestMadeDistanceRound = Math.round(longestMadeDistance * 100) / 100D;
@@ -329,8 +328,17 @@ public class ControlActivity extends AppCompatActivity {
                     mTachBottomText.setText(textlongestMadeDistance);
 
 
-                    mputtMadeText.setText(String.format("%d", PSoCBleRobotService.getTach(PSoCBleRobotService.Motor.PUTTMADE)));
-
+                   /** mputtMadeText.setText(String.format("%d", PSoCBleRobotService.getTach(PSoCBleRobotService.Motor.PUTTMADE)));*/
+                    int ballStartRoll =  (PSoCBleRobotService.getTach(PSoCBleRobotService.Motor.PUTTMADE));
+                    if (ballStartRoll == 0 && longestMadeDistance == 0.0){
+                        ballStoppedFlag = 1;
+                    }
+                    else{
+                        ballStoppedFlag = 0;
+                    }
+                    if (ballStoppedFlag == 1 ){
+                        playingSoundStroke = 0;
+                    }
 
                     mPowerText.setText(String.format("%d", PSoCBleRobotService.getTach(PSoCBleRobotService.Motor.POWER)));
 

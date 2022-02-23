@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (c) 2020, Golftronics, LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification is not permitted.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#302d2d"
+    android:elevation="2dp"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp">
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/last_missed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="200dp"
+        android:text="@string/zero"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/rollDistance"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="250dp"
+        android:text="@string/zero"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="56sp" />
+
+    <TextView
+        android:id="@+id/Velocity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="425dp"
+
+        android:text="@string/zero"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tach_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/zero"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tach_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="460dp"
+        android:text="@string/zero"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/velocity_falloff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="500dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/velocity_max"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="150dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp" />
+
+
+
+
+    <TextView
+        android:id="@+id/tach_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/zero"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/rollDistance"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="24sp" />
+
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="425dp"
+        android:text="Putts Made"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="460dp"
+        android:text="@string/puttsMade"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="35dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="@string/bootload"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="75dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="@string/battery"
+        android:textSize="12sp" />
+
+
+    <Switch
+        android:id="@+id/led_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="10dp"
+        android:text="" />
+
+    <Button
+        android:id="@+id/ready_button"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="350dp"
+        android:background="#198919"
+        android:text="Ready" />
+
+    <Button
+        android:id="@+id/stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="550dp"
+        android:layout_marginLeft="180dp"
+
+        android:background="#198919"
+        android:text="Stats" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="250dp"
+        android:text="ft."
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="56sp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="150dp"
+        android:text="Velocity ="
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/slope_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="500dp"
+        android:textColor="@android:color/holo_blue_light"
+        android:text="Select slope"/>
+
+
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+
+        />
+
+    <Button
+        android:id="@+id/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="20dp"
+        android:background="#198919"
+        android:text="SCAN" />
+
+</FrameLayout>

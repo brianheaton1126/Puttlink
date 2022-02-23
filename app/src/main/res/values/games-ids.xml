@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Google Play game services IDs. Save this file as res/values/games-ids.xml in your project.-->
+<resources>
+  <!--app_id-->
+  <string name="app_id" translatable="false">641309229623</string>
+  <!--package_name-->
+
+  <!--package_name-->
+  <string name="package_name" translatable="false">com.golftronics.golfball.ble</string>
+  <!--achievement Make Putt Over 8 ft-->
+  <string name="achievement_make_putt_over_8_ft" translatable="false">CgkIt4SJiNUSEAIQDQ</string>
+  <!--achievement Make Putt Over 10 ft.-->
+  <string name="achievement_make_putt_over_10_ft" translatable="false">CgkIt4SJiNUSEAIQCQ</string>
+  <!--achievement Make Putt Over 12 ft.-->
+  <string name="achievement_make_putt_over_12_ft" translatable="false">CgkIt4SJiNUSEAIQDg</string>
+  <!--achievement Make Putt Over 15 ft.-->
+  <string name="achievement_make_putt_over_15_ft" translatable="false">CgkIt4SJiNUSEAIQDw</string>
+  <!--achievement 3 in a Row (Over 3 ft.)-->
+  <string name="achievement_3_in_a_row_over_3_ft" translatable="false">CgkIt4SJiNUSEAIQCg</string>
+  <!--achievement 3 in a Row (Over 5 ft.)-->
+  <string name="achievement_3_in_a_row_over_5_ft" translatable="false">CgkIt4SJiNUSEAIQCw</string>
+  <!--achievement Practice Session > 1 hr.-->
+  <string name="achievement_practice_session__1_hr" translatable="false">CgkIt4SJiNUSEAIQDA</string>
+  <!--leaderboard Make Percentage: 3 to 5 ft.-->
+  <string name="leaderboard_make_percentage_3_to_5_ft" translatable="false">CgkIt4SJiNUSEAIQAQ</string>
+  <!--leaderboard Make Percentage: 6 to 8 ft.-->
+  <string name="leaderboard_make_percentage_6_to_8_ft" translatable="false">CgkIt4SJiNUSEAIQAg</string>
+  <!--leaderboard Make Percentage:  9 to 11 ft.-->
+  <string name="leaderboard_make_percentage__9_to_11_ft" translatable="false">CgkIt4SJiNUSEAIQAw</string>
+  <!--leaderboard Make Percentage: 12 to 15 ft.-->
+  <string name="leaderboard_make_percentage_12_to_15_ft" translatable="false">CgkIt4SJiNUSEAIQBA</string>
+  <!--leaderboard Length of Putts Made in 60s-->
+  <string name="leaderboard_length_of_putts_made_in_60s" translatable="false">CgkIt4SJiNUSEAIQBQ</string>
+  <!--leaderboard Longest Streak Over 3 ft.-->
+  <string name="leaderboard_longest_streak_over_3_ft" translatable="false">CgkIt4SJiNUSEAIQBg</string>
+  <!--leaderboard Longest Streak Over 5 ft.-->
+  <string name="leaderboard_longest_streak_over_5_ft" translatable="false">CgkIt4SJiNUSEAIQBw</string>
+  <!--leaderboard Longest Streak Over 8 ft.-->
+  <string name="leaderboard_longest_streak_over_8_ft" translatable="false">CgkIt4SJiNUSEAIQCA</string>
+  <!--leaderboard Longest Putt Today-->
+  <string name="leaderboard_longest_putt_today" translatable="false">CgkIt4SJiNUSEAIQEA</string>
+  <!--leaderboard Longest Putt This Week-->
+  <string name="leaderboard_longest_putt_this_week" translatable="false">CgkIt4SJiNUSEAIQEQ</string>
+  <!--event App usage time-->
+  <string name="event_app_usage_time" translatable="false">CgkIt4SJiNUSEAIQEw</string>
+  <!--event Make percentage 3 to 5 ft.-->
+  <string name="event_make_percentage_3_to_5_ft" translatable="false">CgkIt4SJiNUSEAIQFA</string>
+  <!--event Number of putts attempted 3 - 5 ft.-->
+  <string name="event_number_of_putts_attempted_3__5_ft" translatable="false">CgkIt4SJiNUSEAIQFQ</string>
+  <!--event Number of putts made 3 - 5 ft.-->
+  <string name="event_number_of_putts_made_3__5_ft" translatable="false">CgkIt4SJiNUSEAIQFg</string>
+  <!--leaderboard Make Percentage: 3 to 5 ft-->
+</resources>

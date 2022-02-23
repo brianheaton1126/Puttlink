@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright (c) 2020, Golftronics, LLC
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification is not permitted.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    android:paddingRight="0dp"
+    android:paddingBottom="0dp"
+
+    >
+
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/browser_actions_title_color"
+        android:layout_alignParentBottom="true"
+
+        app:menu="@menu/bottom_nav_menu"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"/>
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:layout_above="@+id/nav_view"
+        android:layout_below="@+id/my_toolbar_practice"
+
+
+        android:orientation="vertical">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:visibility="gone"
+            app:use_controller="false"
+
+            >
+
+
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+
+            <Button
+                android:id="@+id/practice_button"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:elevation="5dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/buttontransparent"
+                android:text="Practice"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="30dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias=".1"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/leaderboard_button"/>
+
+
+            <Button
+                android:id="@+id/stats_button"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:elevation="5dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/buttontransparent"
+                android:text="Stats"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="30dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias=".3"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/leaderboard_button"/>
+
+
+
+
+
+            <Button
+                android:id="@+id/events_button"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:elevation="5dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/buttontransparent"
+                android:text="Events"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="30dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias=".7"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/leaderboard_button"/>
+
+
+            <Button
+                android:id="@+id/leaderboard_button"
+                android:layout_width="200dp"
+                android:layout_height="80dp"
+                android:elevation="5dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/buttontransparent"
+                android:text="Leaderboards"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="24dp"
+                android:layout_marginHorizontal="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias=".5"
+                app:layout_constraintHorizontal_bias="1"/>
+
+            <Button
+                android:id="@+id/readData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="72dp"
+                android:background="@drawable/button"
+                android:text="IMPORT"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="@+id/scan"
+                app:layout_constraintStart_toStartOf="@+id/scan"
+                app:layout_constraintTop_toBottomOf="@+id/scan" />
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:visibility="gone"
+                app:layout_constraintVertical_bias="1"
+                app:layout_constraintHorizontal_bias="1"/>
+
+            <TextView
+                android:id="@+id/greeting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="24sp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

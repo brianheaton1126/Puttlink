@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "641309229623",
+    "project_id": "speedfix-78835648",
+    "storage_bucket": "speedfix-78835648.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641309229623:android:3682ea2182d88e7dd635b2",
+        "android_client_info": {
+          "package_name": "com.golftronics.golfball.ble"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641309229623-athq7234v7p2foc4sic9hg0kie5sm7cv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_DPbJL8POGB1LH2588dxHoLuQ7oVXuXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641309229623-athq7234v7p2foc4sic9hg0kie5sm7cv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,2248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/button3"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="60dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+
+    >
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="top"
+            android:clipChildren="false"
+            android:clipToPadding="false">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/putt_data1"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="left"
+                android:visibility="visible"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@android:color/white"
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Putt Data 1"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/putt_data1_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="+"
+                        android:layout_marginRight="8dp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+            android:id="@+id/distance_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+
+            android:alpha="1"
+            app:strokeWidth="4dp"
+            >
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="16dp"
+                android:elevation="6dp"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="16dp"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+
+                            android:layout_width="160dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:elevation="0dp"
+                            android:visibility="gone"
+                            android:background="@drawable/button2">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="DISTANCE"
+                                android:textSize="30sp"
+                                android:textColor="@color/BLACK"
+                                android:textStyle="bold"
+                                android:textAlignment="center">
+
+                            </TextView>
+
+
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/buttoncircle">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Dist"
+                                android:textSize="20sp"
+                                android:textColor="@color/BLACK"
+                                android:textStyle="bold"
+                                android:textAlignment="center">
+
+                            </TextView>
+
+
+                            <TextView
+                                android:id="@+id/roll_distance_practice"
+                                android:layout_width="150dp"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:text="27.7"
+                                android:textColor="@color/BLACK"
+                                android:textSize="60sp"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:layout_marginRight="0dp"
+                                >
+
+                            </TextView>
+
+
+
+                        </RelativeLayout>
+
+
+
+
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+
+                            android:layout_gravity="left"
+                            android:background="@drawable/buttoncircle">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Made"
+                                android:textSize="20sp"
+                                android:textColor="@color/BLACK"
+                                android:textStyle="bold"
+                                android:textAlignment="center">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/home_made"
+                                android:layout_width="150dp"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:text="1"
+                                android:textColor="@color/BLACK"
+                                android:textSize="60sp"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:layout_marginRight="0dp"
+                                >
+
+                            </TextView>
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/buttoncircle">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="MP"
+                                android:textSize="20sp"
+                                android:textColor="@color/BLACK"
+                                android:textStyle="bold"
+                                android:textAlignment="center">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/putt_data1_make_per"
+                                android:layout_width="150dp"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:text="55%"
+                                android:textColor="@color/BLACK"
+                                android:textSize="60sp"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:layout_marginRight="0dp"
+                                >
+
+                            </TextView>
+
+
+
+                        </RelativeLayout>
+
+
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:elevation="6dp"
+                    android:orientation="horizontal">
+
+
+
+
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/make_perc_card"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button2"
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+
+                        android:text="Make Perc"
+
+
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="28sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/home_make_per"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+
+                        android:text="0%"
+                        android:layout_marginRight="4dp"
+                        android:textAlignment="viewEnd"
+
+                        android:textColor="@color/BLACK"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/putt_data_2"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="left"
+                android:visibility="visible"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@android:color/white"
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Putt Data 2"
+
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/putt_data2_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="+"
+                        android:layout_marginRight="8dp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/velocity_card"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="visible"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button2"
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView30"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+
+                        android:text="Velocity"
+
+
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="26sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/home_velocity"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+
+                        android:text="0.0"
+                        android:layout_marginRight="4dp"
+                        android:textAlignment="viewEnd"
+
+                        android:textColor="@color/BLACK"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pure_roll_card"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button2"
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+
+                        android:text="Pure Roll %"
+
+
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="26sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/pure_roll_practice"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+
+                        android:text="92%"
+                        android:layout_marginRight="4dp"
+                        android:textAlignment="viewEnd"
+
+                        android:textColor="@color/BLACK"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/past_hole_card"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button2"
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+
+                        android:text="Past Hole"
+
+
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="26sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/past_hole"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+
+                        android:text="0.0 ft"
+                        android:layout_marginRight="4dp"
+                        android:textAlignment="viewEnd"
+
+                        android:textColor="@color/BLACK"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/read_stimp"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="left"
+                android:visibility="visible"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Read Stimp"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/read_stimp_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="+"
+                        android:layout_marginRight="8dp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+
+
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/upslope_stimp_card"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="visible"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button2"
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+
+                        android:text="Upslope Value"
+
+
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="24sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/upslope_stimp"
+                        android:layout_width="0dp"
+                        android:layout_weight=".5"
+                        android:layout_height="match_parent"
+
+                        android:text="0.0"
+                        android:layout_marginRight="4dp"
+                        android:textAlignment="viewEnd"
+
+                        android:textColor="@color/BLACK"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/downslope_stimp_card"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button2"
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+
+                        android:text="Downslope Value"
+
+
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="24sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/downslope_stimp"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+
+                        android:text="0.0"
+                        android:layout_marginRight="4dp"
+                        android:textAlignment="viewEnd"
+
+                        android:textColor="@color/BLACK"
+                        android:textSize="36sp"
+                        android:textStyle="bold"
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/slope_corrected_stimp_card"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button2"
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+
+                        android:text="Slope Corrected"
+
+
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="24sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/slope_corrected"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+
+                        android:text="0.0"
+                        android:layout_marginRight="4dp"
+                        android:textAlignment="viewEnd"
+
+                        android:textColor="@color/BLACK"
+                        android:textSize="36sp"
+                        android:textStyle="bold"
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/challenges"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:layout_gravity="left"
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Challenges"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/challenges_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="+"
+                        android:layout_marginRight="8dp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/puttlink_challenges_card"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button2"
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+
+                        android:text="PuttLink Challenges"
+
+
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="24sp"
+                        >
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/friend_challenges_card"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button2"
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+
+                        android:text="Friend Challenges"
+
+
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="24sp"
+                        >
+
+                    </TextView>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drills"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+
+                android:layout_gravity="left"
+                android:visibility="visible"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Drills"
+                        android:layout_alignParentLeft="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/drills_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="+"
+                        android:layout_marginRight="8dp"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+
+
+                </RelativeLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drill1_minimized"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView43"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginVertical="0dp"
+                        android:text="Make Accuracy"
+                        android:paddingTop="8dp"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="26sp"
+                        >
+
+                    </TextView>
+
+
+
+                        <Button
+                            android:id="@+id/make_accuracy_start_btn1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/checkbox_outline"
+
+                            android:scaleX="1"
+                            android:scaleY="1">
+
+
+
+                        </Button>
+
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drill1_expanded"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:orientation="vertical"
+                       android:background="@drawable/button2">
+
+
+
+
+
+
+
+                       <TextView
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="Choose desired practice range and complete make percentage achievements.  "
+                           android:textColor="@color/BLACK"
+                           android:textSize="22sp">
+
+
+                       </TextView>
+
+
+                       <Button
+                           android:id="@+id/make_accuracy_distance_range"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:text="3 - 5 ft"
+                           android:textAllCaps="false"
+                           android:textSize="48sp"
+                           android:textColor="@color/BLACK"
+                           android:layout_marginTop="36dp"
+                           android:background="@drawable/button2"
+                           android:textAlignment="center">
+
+                       </Button>
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="60dp"
+                           android:orientation="horizontal">
+
+                           <TextView
+                               android:layout_width="0dp"
+                               android:layout_weight="1"
+                               android:layout_height="wrap_content"
+                               android:text="Made/Attempt"
+
+                               android:textSize="26sp"
+                               android:textColor="@color/BLACK"
+
+                               android:textAlignment="viewStart">
+
+                           </TextView>
+
+                           <TextView
+                               android:id="@+id/make_accuracy_made_attempted"
+                               android:layout_width="0dp"
+                               android:layout_weight=".5"
+                               android:layout_height="wrap_content"
+                               android:text="15/50"
+
+                               android:textSize="28sp"
+                               android:textColor="@color/BLACK"
+
+
+                               android:textAlignment="viewEnd">
+
+                           </TextView>
+
+
+                       </LinearLayout>
+
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginBottom="30dp"
+                           android:layout_marginTop="0dp"
+                           android:orientation="horizontal">
+
+                           <TextView
+                               android:layout_width="0dp"
+                               android:layout_weight="1"
+                               android:layout_height="wrap_content"
+                               android:text="Make %"
+
+                               android:textSize="26sp"
+                               android:textColor="@color/BLACK"
+
+
+                               android:textAlignment="viewStart">
+
+                           </TextView>
+
+                           <TextView
+                               android:id="@+id/make_accuracy_make_percentage"
+                               android:layout_width="0dp"
+                               android:layout_weight="1"
+                               android:layout_height="wrap_content"
+                               android:text="98%"
+
+                               android:textSize="28sp"
+                               android:textColor="@color/BLACK"
+
+
+                               android:textAlignment="viewEnd">
+
+                           </TextView>
+
+
+                       </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drill2_minimized"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView46"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginVertical="0dp"
+                        android:text="Distance Accuracy"
+                        android:paddingTop="8dp"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="26sp"
+                        >
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/distance_accuracy_start_btn1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/checkbox_outline"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="1"
+                        android:scaleY="1" >
+
+
+                    </Button>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drill2_expanded"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/button2">
+
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Putt a distance equal to the target value below and complete distance accuracy achievments.  New target shown after each attempt.  "
+                        android:textColor="@color/BLACK"
+                        android:textSize="22sp">
+
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/distance_control_next_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="8 ft"
+                        android:textAllCaps="false"
+                        android:textSize="48sp"
+                        android:textColor="@color/BLACK"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/button2"
+                        android:textAlignment="center">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Actual Distance:"
+                        android:textColor="@color/BLACK"
+                        android:layout_marginTop="16dp"
+                        android:textSize="24sp">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/distance_control_actual_distance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="8 ft"
+                        android:textAllCaps="false"
+                        android:textSize="48sp"
+                        android:textColor="@color/BLACK"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button2"
+                        android:textAlignment="center">
+
+                    </TextView>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="30dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Average Error:"
+
+                            android:textSize="24sp"
+                            android:textColor="@color/BLACK"
+                            android:layout_marginTop="36dp"
+
+                            android:textAlignment="viewStart">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/distance_accuracy_average_error"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:text="+ 1.5 ft"
+                            android:layout_marginRight="4dp"
+                            android:textSize="24sp"
+                            android:textColor="@color/BLACK"
+                            android:layout_marginTop="36dp"
+
+                            android:textAlignment="viewEnd">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drill3_minimized"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button2">
+
+                        <TextView
+                            android:id="@+id/textView47"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textAlignment="viewStart"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginVertical="0dp"
+                            android:text="Pace Control"
+                            android:paddingTop="8dp"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="26sp"
+                            >
+
+                        </TextView>
+
+                        <Button
+                            android:id="@+id/pace_control_start_btn1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:background="@drawable/checkbox_outline"
+                            android:layout_marginRight="4dp"
+                            android:scaleX="1"
+                            android:scaleY="1">
+
+
+                        </Button>
+
+
+                    </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drill3_expanded"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/button2">
+
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Practice making putts at a slow, medium, and firm pace.  The next attempt should be:"
+                        android:textColor="@color/BLACK"
+                        android:textSize="22sp">
+
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/pace_control_next_pace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="FIRM"
+                        android:textAllCaps="true"
+                        android:textSize="48sp"
+                        android:textColor="@color/BLACK"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/button2"
+                        android:textAlignment="center">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Actual Pace:"
+                        android:textColor="@color/BLACK"
+                        android:layout_marginTop="16dp"
+                        android:textSize="22sp">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/pace_control_actual_pace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="SLOW"
+                        android:textAllCaps="true"
+                        android:textSize="48sp"
+                        android:textColor="@color/BLACK"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button2"
+                        android:textAlignment="center">
+
+                    </TextView>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Success Rate:"
+
+                            android:textSize="24sp"
+                            android:textColor="@color/BLACK"
+                            android:layout_marginTop="16dp"
+
+                            android:textAlignment="viewStart">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/pace_control_success_rate"
+                            android:layout_width="0dp"
+                            android:layout_weight=".25"
+                            android:layout_height="wrap_content"
+                            android:text="75%"
+
+                            android:textSize="24sp"
+                            android:textColor="@color/BLACK"
+                            android:layout_marginTop="16dp"
+
+                            android:textAlignment="viewStart">
+
+                        </TextView>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="30dp">
+
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Weakness:"
+
+                            android:textSize="24sp"
+                            android:textColor="@color/BLACK"
+                            android:layout_marginTop="8dp"
+
+                            android:textAlignment="viewStart">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/pace_control_weakness"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:text="FIRM"
+                            android:layout_marginRight="4dp"
+                            android:textSize="24sp"
+                            android:textColor="@color/BLACK"
+                            android:layout_marginTop="8dp"
+
+                            android:textAlignment="viewEnd">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drill4_minimized"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginVertical="0dp"
+                        android:text="Pressure Putts"
+                        android:paddingTop="8dp"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="26sp"
+                        >
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/pressure_putts_start_btn1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/checkbox_outline"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="1"
+                        android:scaleY="1">
+
+
+                    </Button>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drill4_expanded"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/button2">
+
+
+
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Make putts of increasing length starting at 3 ft.  Must start over if a putt is missed or if last putt is shorter."
+                        android:textColor="@color/BLACK"
+                        android:layout_marginTop="4dp"
+                        android:textSize="22sp">
+
+
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Streak:"
+                        android:layout_marginTop="36dp"
+                        android:textColor="@color/BLACK"
+                        android:textSize="24sp">
+
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/pressure_putt_streak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textSize="48sp"
+                        android:textColor="@color/BLACK"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button2"
+                        android:textAlignment="center">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Longest Streak"
+
+                            android:textSize="26sp"
+                            android:textColor="@color/BLACK"
+                            android:layout_marginTop="36dp"
+
+                            android:textAlignment="viewStart">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/pressure_putt_longest_streak"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:text="5"
+                            android:layout_marginRight="4dp"
+                            android:textSize="28sp"
+                            android:textColor="@color/BLACK"
+                            android:layout_marginTop="36dp"
+
+                            android:textAlignment="viewEnd">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="30dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Longest Made"
+
+                            android:textSize="26sp"
+                            android:textColor="@color/BLACK"
+
+
+                            android:textAlignment="viewStart">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/pressure_putt_longest_made"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="wrap_content"
+                            android:text="8.2 ft"
+
+                            android:textSize="28sp"
+                            android:textColor="@color/BLACK"
+
+
+                            android:textAlignment="viewEnd">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drill5_minimized"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2"
+                    >
+
+                    <TextView
+                        android:id="@+id/textView45"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textAlignment="viewStart"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginVertical="0dp"
+                        android:text="Over / Under"
+                        android:paddingTop="8dp"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="26sp"
+                        >
+
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/over_under_start_btn1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/checkbox_outline"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"
+                        android:scaleX="1"
+                        android:scaleY="1">
+
+
+                    </Button>
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/drill5_expanded"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_gravity="right"
+                android:visibility="visible"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/button2">
+
+
+
+
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/drill5_instructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="12dp"
+                        android:text=""
+                        android:visibility="visible"
+                        android:textColor="@color/BLACK"
+                        android:textSize="18sp"
+                        >
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/drill5_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                         <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/microphone_enable"
+                            android:text="Microphone enabled"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/BLACK"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/microphone_enable"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:paddingRight="10dp"
+                            android:backgroundTint="@color/BLACK"
+                            android:layout_toRightOf="@+id/microphone"
+                            android:background="@drawable/check_box_">
+
+                        </ImageView>
+
+
+                        <ImageView
+                            android:id="@+id/microphone"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:paddingRight="0dp"
+                            android:layout_alignParentLeft="true"
+                            android:background="@drawable/microphone_enable">
+
+                        </ImageView>
+
+
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/speech_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="spoken distance"
+                        android:layout_marginTop="16dp"
+                        android:paddingVertical="8dp"
+                        android:background="@android:color/darker_gray"
+                        android:textColor="@color/BLACK"
+                        android:textSize="24sp"
+                        android:textAlignment="center">
+
+                    </EditText>
+
+
+
+                    <TextView
+                        android:id="@+id/over_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Actual Distance"
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="4dp"
+
+                        android:layout_marginTop="24dp"
+                        android:textColor="@color/BLACK"
+                        android:textSize="22sp">
+
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/over_under_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAllCaps="false"
+                        android:textSize="48sp"
+                        android:textColor="@color/BLACK"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/button2"
+                        android:textAlignment="center">
+
+                    </TextView>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Average error:"
+
+                            android:textSize="20sp"
+                            android:textColor="@color/BLACK"
+                            android:layout_marginTop="20dp"
+
+                            android:textAlignment="viewStart">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/over_under_success_rate"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:text="80 %"
+                            android:layout_marginRight="4dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/BLACK"
+                            android:layout_marginTop="20dp"
+
+                            android:textAlignment="viewEnd">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="400dp">
+
+        </View>
+
+
+
+        </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+
+
+    </FrameLayout>
+</RelativeLayout>

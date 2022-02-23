@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/stimp_8.0"
+        android:title="8.0" />
+    <item
+        android:id="@+id/stimp_8.5"
+        android:title="8.5" />
+
+    <item
+        android:id="@+id/stimp_9.0"
+        android:title="9.0" />
+    <item
+        android:id="@+id/stimp_9.5"
+        android:title="9.5" />
+
+    <item
+        android:id="@+id/stimp_10.0"
+        android:title="10.0" />
+    <item
+        android:id="@+id/stimp_10.5"
+        android:title="10.5" />
+    <item
+        android:id="@+id/stimp_11.0"
+        android:title="11.0" />
+
+    <item
+        android:id="@+id/stimp_11.5"
+        android:title="11.5" />
+    <item
+        android:id="@+id/stimp_12.0"
+        android:title="12.0" />
+
+    <item
+        android:id="@+id/stimp_12.5"
+        android:title="12.5" />
+
+    <item
+        android:id="@+id/stimp_13.0"
+        android:title="13.0" />
+
+
+
+
+
+
+
+
+
+</menu>

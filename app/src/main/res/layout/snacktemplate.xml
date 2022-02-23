@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:visibility="gone"
+         />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/img1"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:hint="Invite to New Game?"
+        android:textColor="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/text_invite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@android:color/white">
+
+    </TextView>
+
+
+    <Button
+        android:id="@+id/btnAccept"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/text_invite"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="ACCEPT"
+        android:textSize="18sp"
+        android:layout_marginBottom="4dp"
+        android:textColor="#FFFF00" />
+
+
+    <Button
+        android:id="@+id/btnDecline"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/text_invite"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="DECLINE"
+        android:textSize="18sp"
+        android:layout_marginBottom="4dp"
+        android:textColor="#FFFF00" />
+</RelativeLayout>

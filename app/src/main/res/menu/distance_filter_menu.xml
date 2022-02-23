@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/dist_three_eight"
+        android:title="3 to 8 ft"/>
+    <item
+        android:id="@+id/dist_nine_fourteen"
+        android:title="9 to 14 ft" />
+
+    <item
+        android:id="@+id/dist_fifteen_twenty"
+        android:title="15 to 20 ft" />
+    <item
+        android:id="@+id/dist_twentyone_twentyfive"
+        android:title="21 to 25 ft" />
+
+
+
+</menu>
+

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/slope_all"
+        android:title="All"/>
+
+
+
+    <item
+        android:id="@+id/slope_level"
+        android:title="Level"/>
+
+
+    <item
+
+        android:id="@+id/slope_up"
+        android:title="Uphill"/>
+
+
+    <item
+        android:id="@+id/slope_down"
+        android:title="Downhill"/>
+
+
+    <item
+
+        android:id="@+id/slope_LR"
+        android:title="Left to right"/>
+
+
+    <item
+        android:id="@+id/slope_RL"
+        android:title="Right to left"/>
+
+
+
+
+
+</menu>

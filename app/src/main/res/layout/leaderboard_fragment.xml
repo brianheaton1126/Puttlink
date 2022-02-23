@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/green"
+    android:id="@+id/fragment_container"
+    android:elevation="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Leaderboards"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            >
+
+        </TextView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:elevation="8dp">
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="Rank"
+                android:textAlignment="viewEnd"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+
+                android:layout_marginLeft="5dp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            >
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+
+            >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="2"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24dp"
+
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+
+            </View>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skill Rank"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:layout_marginLeft="8dp"
+                >
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="CLICK HERE"
+                    android:textSize="12sp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="16sp">
+
+                </Button>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            >
+
+        </View>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+
+            >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="7"
+                android:textAlignment="viewEnd"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                >
+
+            </View>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open Events"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:layout_marginLeft="8dp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <Button
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="CLICK HERE"
+                android:textSize="12sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="16sp">
+
+            </Button>
+
+        </RelativeLayout>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            >
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+
+            android:layout_marginTop="0dp"
+            >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                >
+
+            </View>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Challenge"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:layout_marginLeft="8dp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="CLICK HERE"
+                    android:textSize="12sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="16sp">
+
+                </Button>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            >
+
+        </View>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+
+
+            >
+
+
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="18"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                >
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Longest Makes"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="CLICK HERE"
+                    android:textSize="12sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="16sp">
+
+                </Button>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            >
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+
+            >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="31"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                >
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Longest Streaks"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="CLICK HERE"
+                    android:textSize="12sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="16sp">
+
+                </Button>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            >
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+
+            >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textAlignment="viewEnd"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+            </TextView>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                >
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Make Percentages:"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                >
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            >
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+
+            >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="21"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                >
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 feet"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="CLICK HERE"
+                    android:textSize="12sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="16sp">
+
+                </Button>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            >
+
+        </View>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+
+            >
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                >
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8 feet"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="CLICK HERE"
+                    android:textSize="12sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="16sp">
+
+                </Button>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            >
+
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="0dp"
+
+            >
+
+
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:textAlignment="viewEnd"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+
+                tools:ignore="RtlCompat">
+
+            </TextView>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                >
+
+            </View>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12+ feet"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="italic"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp">
+
+            </TextView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:text="CLICK HERE"
+                    android:textSize="12sp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="16sp">
+
+                </Button>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/white"
+            >
+
+        </View>
+
+    </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+</FrameLayout>
+

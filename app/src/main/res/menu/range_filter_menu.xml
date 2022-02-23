@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item
+        android:id="@+id/three_five"
+        android:title="3 - 5 ft"
+        />
+
+    <item
+        android:id="@+id/six_eight"
+        android:title="6 - 8 ft" />
+
+    <item
+        android:id="@+id/nine_eleven"
+        android:title="9 - 11 ft" />
+    <item
+        android:id="@+id/twelve_fifteen"
+        android:title="12 - 15 ft" />
+    <item
+        android:id="@+id/sixteen_twenty"
+        android:title="16 - 20 ft" />
+    <item
+        android:id="@+id/twentyone_twentyfive"
+        android:title="21 - 25 ft" />
+
+
+
+
+
+</menu>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Larger blue circle -->
+
+    <item>
+        <shape android:shape="oval">
+            <size
+                android:width="5dp"
+                android:height="5dp" />
+            <solid android:color="#00FF00" />
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/ic_baseline_videocam_24" />
+
+</layer-list>

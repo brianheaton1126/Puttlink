@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-Copyright (c) 2016, Cypress Semiconductor Corporation
+Copyright (c) 2020, Golftronics, LLC
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+modification is not permitted.
 
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
@@ -23,38 +17,120 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
-For more information on Cypress BLE products visit:
-http://www.cypress.com/products/bluetooth-low-energy-ble
 -->
-<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/swipeRefreshId"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        >
 
-        <TextView
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="20dp"
-            android:text="@string/refreshText"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            >
 
-        <ListView
-            android:id="@+id/BlelistItems"
-            android:layout_margin="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PuttLink"
+                android:textSize="44sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/toolbar_title" />
 
-    </LinearLayout>
-</androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-    >
+            <ImageView
+                android:id="@+id/battery_level"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/vector_battery_full"
+                >
+
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/bluetooth_connected"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/vector_bluetooth">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/browser_actions_title_color"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+
+     >
+
+     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+         android:id="@+id/swipeRefreshId"
+         android:layout_width="match_parent"
+
+         android:layout_height="match_parent"
+         >
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#302D2D"
+             android:orientation="vertical">
+
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:layout_marginTop="80dp"
+                 android:text="@string/refreshText"
+                 android:textAlignment="center"
+                 android:textColor="@android:color/white"
+                 android:textSize="20sp"
+                 android:textStyle="bold" />
+
+             <ListView
+                 android:id="@+id/BlelistItems"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_marginTop="10dp"
+                 />
+
+         </LinearLayout>
+     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,17 +16,57 @@
     <string name="bootload">Bootload</string>
     <string name="battery">Battery</string>
 
+    <string name="setdistance">0.0</string>
+
     <string name="readyState">Current State</string>
 
-    <string-array name="planets_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+    <string name="drillsbutton">D\n R\n I\n L\n L\n S\n</string>
+
+
+
+    <string-array name="puttslope">
+        <item>Level</item>
+        <item>Downhill</item>
+        <item>Uphill</item>
+        <item>L to R</item>
+        <item>R to L</item>
     </string-array>
+
+
+    <string-array name="puttstimp">
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+    </string-array>
+
+    <string-array name="slope_array">
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>level</item>
+        <item>+1</item>
+        <item>+2</item>
+        <item>+3</item>
+        <item>+4</item>
+        <item>+5</item>
+    </string-array>
+
+    <string-array name="numbers">
+        <item>DAY</item>
+        <item>WEEK</item>
+        <item>MONTH</item>
+        <item>YEAR</item>
+        <item>Five</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="signin_other_error">sign-in error</string>
 
 </resources>

@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+
+    android:background="@drawable/greenbackground2">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/button3"
+
+        android:orientation="vertical">
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="6dp"
+        android:visibility="invisible"
+        android:id="@+id/cardoneexpanded"
+
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintStart_toStartOf="@+id/fragment_container"
+            app:layout_constraintTop_toTopOf="@+id/fragment_container"
+            android:id="@+id/cardbig"
+            android:background="@drawable/button2">
+
+
+
+
+            <TextView
+                android:id="@+id/make"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:elevation="6dp"
+                android:text="MAKE %"
+                android:textColor="@android:color/background_dark"
+
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+
+            <ImageView
+                android:id="@+id/close_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/close_x"
+                app:layout_constraintTop_toTopOf="@+id/cardbig"
+                app:layout_constraintEnd_toEndOf="@+id/cardbig"
+                app:tint="@color/BLACK" />
+
+
+
+            <Button
+                android:id="@+id/make_perc_dist"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:elevation="6dp"
+                android:text="3 - 5 ft"
+                android:clickable="true"
+                android:layout_marginHorizontal="4dp"
+                android:background="@drawable/button4"
+                android:textColor="@android:color/background_dark"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/make"
+                app:layout_constraintEnd_toStartOf="@+id/close_button"
+                app:layout_constraintTop_toTopOf="@id/make"
+                app:layout_constraintBottom_toBottomOf="@id/make">
+
+            </Button>
+
+
+            <Button
+                android:id="@+id/make_distance_arrow"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:background="@drawable/dropdown_arrow"
+                android:backgroundTint="@android:color/holo_red_light"
+                app:layout_constraintEnd_toEndOf="@id/make_perc_dist"
+                app:layout_constraintStart_toStartOf="@+id/make_perc_dist"
+                app:layout_constraintTop_toBottomOf="@id/make_perc_dist">
+
+
+            </Button>
+
+            <TextView
+                android:id="@+id/alluseraverage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:elevation="6dp"
+                android:textAlignment="center"
+                android:text="ALL USERS AVG: 78%"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                android:background="@drawable/button4"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/pgatouravg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+
+
+            <TextView
+                android:id="@+id/pgatouravg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:elevation="6dp"
+                android:textAlignment="center"
+                android:text="PGA TOUR AVG: 85%"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                android:background="@drawable/button4"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/makeperctable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/button6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/make_distance_arrow">
+                >
+
+            <LinearLayout
+                android:id="@+id/buttonlayout"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/make_distance_arrow">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:background="@drawable/button4">
+
+                <TextView
+                    android:id="@+id/personal_results"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="TODAY"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="28sp"
+                    android:layout_marginVertical="4dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black">
+
+
+                </TextView>
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button4">
+
+
+                <TextView
+                    android:id="@+id/all_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="ALL TIME"
+                    android:layout_marginVertical="4dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black">
+
+
+                </TextView>
+
+
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button4">
+
+                        <TextView
+                            android:id="@+id/makepercentagesession"
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:elevation="6dp"
+                            android:text="48%"
+
+                            android:textColor="@android:color/holo_green_dark"
+                            android:textSize="72sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="0dp">
+
+                        </TextView>
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/attemptstoday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="25"
+                        android:padding="4dp"
+                        android:layout_alignParentRight="true"
+                        android:textSize="14sp"
+                        android:layout_marginRight="0dp"
+                        android:background="@drawable/button4"
+                        android:textColor="@android:color/black">
+
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button4">
+
+                    <TextView
+                        android:id="@+id/makepercentageaverage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:elevation="6dp"
+                        android:text="53%"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@android:color/holo_green_dark"
+                        android:textSize="72sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="0dp"
+
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/allattempts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:text="180"
+                        android:padding="4dp"
+                        android:layout_alignParentRight="true"
+                        android:textSize="14sp"
+                        android:layout_marginRight="0dp"
+                        android:background="@drawable/button4"
+                        android:textColor="@android:color/black">
+
+
+                    </TextView>
+
+                    </RelativeLayout>
+
+            </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/button6"
+                app:layout_constraintTop_toBottomOf="@+id/makeperctable"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Make % For Last 10 Sessions"
+                    android:textColor="@color/BLACK"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp">
+
+                </TextView>
+
+
+
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/make_bar_chart"
+                    android:layout_height="230dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/button4"
+                    android:padding="8dp"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_marginVertical="2dp"
+                    app:layout_constraintTop_toBottomOf="@+id/makeperctable"
+                    app:layout_constraintBottom_toTopOf="@id/alluseraverage"
+                    app:layout_constraintVertical_bias="0.5">
+
+
+                </com.github.mikephil.charting.charts.BarChart>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="6dp"
+            android:visibility="invisible"
+            android:id="@+id/cardtwoexpanded">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="6dp"
+            app:layout_constraintStart_toStartOf="@+id/fragment_container"
+            app:layout_constraintTop_toTopOf="@+id/fragment_container"
+            android:id="@+id/cardtwobig"
+            android:background="@drawable/button2">
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="6dp"
+            android:visibility="invisible"
+            android:id="@+id/cardthreeexpanded">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="6dp"
+                app:layout_constraintStart_toStartOf="@+id/fragment_container"
+                app:layout_constraintTop_toTopOf="@+id/fragment_container"
+                android:id="@+id/cardthreebig"
+                android:background="@drawable/button2"
+                >
+
+                <TextView
+                    android:id="@+id/card2distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:elevation="6dp"
+                    android:text="DISTANCE PRACTICE"
+                    android:textColor="@color/BLACK"
+                    android:background="@drawable/button6"
+                    android:textSize="24sp"
+                    android:textStyle="normal"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="8dp"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/card2_close_button">
+
+                </TextView>
+
+
+                <ImageView
+                    android:id="@+id/card2_close_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/close_x"
+                    app:layout_constraintTop_toTopOf="@+id/cardthreebig"
+                    app:layout_constraintEnd_toEndOf="@+id/cardthreebig"
+                    app:tint="@color/BLACK" />
+
+
+                <LinearLayout
+                    android:id="@+id/instructions"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/card2distance"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/card2_select_dist"
+
+                    app:layout_constraintHorizontal_bias="0">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Select a distance range to practice.  A new Goal will be randomly generated after each attempt"
+                        android:textColor="@color/BLACK"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="4dp"
+                        android:layout_weight="1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/card2_select_dist"
+
+                        app:layout_constraintTop_toTopOf="@id/card2_select_dist">
+
+                    </TextView>
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+                <Button
+                    android:id="@+id/card2_select_dist"
+                    style="@style/PopupMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="6dp"
+                    android:text="3 to 8 ft"
+                    android:clickable="true"
+                    android:paddingHorizontal="16dp"
+                    android:layout_marginTop="4dp"
+
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/button5"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card2distance"
+                    app:layout_constraintBottom_toTopOf="@id/distancetable"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintHorizontal_bias="1">
+
+                </Button>
+
+
+                <Button
+                    android:id="@+id/card2_arrow"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:visibility="visible"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    android:background="@drawable/dropdown_arrow"
+                    android:backgroundTint="#33FF33"
+
+                    app:layout_constraintStart_toStartOf="@+id/card2_select_dist"
+                    app:layout_constraintEnd_toEndOf="@id/card2_select_dist"
+                    app:layout_constraintTop_toBottomOf="@id/card2_select_dist">
+
+
+                </Button>
+
+                <LinearLayout
+                    android:id="@+id/user_avg_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/button4"
+                    android:layout_marginTop="4dp"
+                    app:layout_constraintTop_toBottomOf="@+id/graph_window"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <TextView
+                        android:id="@+id/avg_dist"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAlignment="viewStart"
+                        android:elevation="6dp"
+                        android:text="My avg:  +1.4 ft."
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp"
+                        android:paddingVertical="4dp"
+                        android:layout_marginLeft="12dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/avg_dist_error"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAlignment="viewEnd"
+                        android:elevation="6dp"
+                        android:text="All Users: +1.9 ft"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp"
+
+                        android:paddingVertical="4dp"
+                        android:layout_marginRight="16dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/distancetable"
+                    android:layout_width="match_parent"
+                    android:layout_height="165dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/button6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/instructions">
+
+
+                    <LinearLayout
+                        android:id="@+id/card3buttonlayout"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card2_arrow">
+
+
+                        <TextView
+                            android:id="@+id/distance_personal_goal"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Goal"
+                            android:textAlignment="center"
+
+                            android:background="@drawable/button4"
+                            android:textSize="28sp"
+                            android:textColor="@android:color/black">
+
+
+                        </TextView>
+
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:background="@drawable/button4">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:textColor="@color/BLACK"
+                                android:layout_centerInParent="true"
+                                android:textAlignment="center"
+                                android:textSize="24sp">
+
+                            </TextView>
+
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/distance_personal_actual"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Actual"
+                            android:textAlignment="center"
+                            android:layout_weight="1"
+                            android:textSize="28sp"
+                            android:background="@drawable/button4"
+
+
+
+
+                            android:textColor="@android:color/black">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <RelativeLayout
+
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:elevation="6dp"
+                            android:background="@drawable/button4"
+                            >
+
+                            <TextView
+                                android:id="@+id/distanceGoal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="select range"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textAlignment="center"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="8dp"
+                                android:textSize="24sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".15"
+                            android:paddingVertical="2dp"
+                            android:paddingHorizontal="1dp"
+                            android:background="@drawable/button4">
+
+                            <ProgressBar
+
+                                style="@style/CustomProgressBarHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleY="5"
+                                android:scaleX="5"
+
+
+                                android:rotation="270"
+                                android:progress="50"
+                                android:secondaryProgress="0"
+
+                                >
+
+                            </ProgressBar>
+
+
+                        </RelativeLayout>
+
+
+
+
+
+
+                        <RelativeLayout
+                            android:id="@+id/actualwindow"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:elevation="6dp"
+                            android:background="@drawable/button4"
+                            android:textColor="@android:color/holo_green_dark"
+                            android:layout_marginTop="0dp"
+
+                            >
+
+
+
+
+                            <TextView
+                                android:id="@+id/roll_distance_practice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textAlignment="center"
+                                android:layout_centerVertical="true"
+                                android:textSize="72sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/graph_window"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/button6"
+                    app:layout_constraintTop_toBottomOf="@+id/distancetable"
+                    >
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DISTANCE ACCURACY DATA"
+                        android:textColor="@color/BLACK"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Line: avg. miss | Red/blue bars: over/under spread"
+                        android:textColor="@color/BLACK"
+                        android:textAlignment="center"
+                        android:textSize="14sp">
+
+                    </TextView>
+
+
+
+
+                    <com.github.mikephil.charting.charts.CombinedChart
+                        android:id="@+id/distance_bar_chart"
+                        android:layout_height="220dp"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/button4"
+                        android:padding="8dp"
+                        android:layout_marginHorizontal="2dp"
+                        android:layout_marginVertical="2dp"
+                        app:layout_constraintTop_toBottomOf="@+id/makeperctable"
+                        app:layout_constraintBottom_toTopOf="@id/pgatouravg"
+                        app:layout_constraintVertical_bias="0.5">
+
+
+                    </com.github.mikephil.charting.charts.CombinedChart>
+
+
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="6dp"
+            android:visibility="invisible"
+            android:id="@+id/cardfourexpanded">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="6dp"
+                app:layout_constraintStart_toStartOf="@+id/fragment_container"
+                app:layout_constraintTop_toTopOf="@+id/fragment_container"
+                android:id="@+id/cardfourbig"
+                android:background="@drawable/button2">
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="6dp"
+            android:visibility="invisible"
+            android:id="@+id/cardfiveexpanded">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="6dp"
+                app:layout_constraintStart_toStartOf="@+id/fragment_container"
+                app:layout_constraintTop_toTopOf="@+id/fragment_container"
+                android:id="@+id/cardfivebig"
+                android:background="@drawable/button2">
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="6dp"
+            android:visibility="invisible"
+            android:id="@+id/cardsixexpanded">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="6dp"
+                app:layout_constraintStart_toStartOf="@+id/fragment_container"
+                app:layout_constraintTop_toTopOf="@+id/fragment_container"
+                android:id="@+id/cardsixbig"
+                android:background="@drawable/button2">
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_gravity="top">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_one"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            app:cardBackgroundColor="@android:color/black"
+
+
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+
+            android:alpha="1"
+            app:strokeWidth="4dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cardsmall">
+
+            <Button
+                android:id="@+id/cardonebutton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/button2"/>
+
+
+
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:elevation="6dp"
+                android:textColor="@android:color/background_dark"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MAKE PERCENTAGE"
+                    android:background="@drawable/button6"
+                    android:textColor="@color/BLACK"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="12dp"
+                    android:textAlignment="center"
+                    android:layout_alignParentTop="true">
+
+                </TextView>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PROGRESS OVER TIME"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/BLACK"
+                    android:textSize="18sp"
+
+
+                    >
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_two"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:cardBackgroundColor="@android:color/black"
+
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2"
+                    android:id="@+id/cardtwobutton"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/textView26"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:elevation="6dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MAKE PERCENTAGE"
+                        android:background="@drawable/button6"
+                        android:textColor="@color/BLACK"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textAlignment="center"
+                        android:layout_alignParentTop="true">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BASED ON PUTT LENGTH"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/BLACK"
+                        android:textSize="18sp"
+
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_three"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:cardBackgroundColor="@android:color/black"
+
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <Button
+                    android:id="@+id/cardthreebutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2">
+
+                </Button>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:elevation="6dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DISTANCE CONTROL"
+                        android:background="@drawable/button6"
+                        android:textColor="@color/BLACK"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textAlignment="center"
+                        android:layout_alignParentTop="true">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PROGRESS OVER TIME"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/BLACK"
+                        android:textSize="18sp"
+
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_four"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:cardBackgroundColor="@android:color/black"
+
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline1"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <Button
+                    android:id="@+id/cardfourbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:elevation="6dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DISTANCE CONTROL"
+                        android:background="@drawable/button6"
+                        android:textColor="@color/BLACK"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textAlignment="center"
+                        android:layout_alignParentTop="true">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BASED ON PUTT LENGTH"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/BLACK"
+                        android:textSize="18sp"
+
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_five"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:cardBackgroundColor="@android:color/black"
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/guideline1"
+                app:layout_constraintStart_toStartOf="parent"
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <Button
+                    android:id="@+id/cardfivebutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:elevation="6dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MAKE PERCENTAGE"
+                        android:background="@drawable/button6"
+                        android:textColor="@color/BLACK"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textAlignment="center"
+                        android:layout_alignParentTop="true">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BASED ON MEASURED STIMP"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/BLACK"
+                        android:textSize="18sp"
+
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_six"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:cardBackgroundColor="@android:color/black"
+
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/guideline1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <Button
+                    android:id="@+id/cardsixbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/textView25"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:elevation="6dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PRACTICE FOCUS"
+                        android:background="@drawable/button6"
+                        android:textColor="@color/BLACK"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textAlignment="center"
+                        android:layout_alignParentTop="true">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PUTT PRACTICE TIME BY PUTT LENGTH"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/BLACK"
+                        android:textSize="18sp"
+
+
+                        >
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.30" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.60" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:id="@+id/expanded_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+
+
+
+
+
+
+        </ImageView>
+
+
+
+
+    </FrameLayout>
+</RelativeLayout>

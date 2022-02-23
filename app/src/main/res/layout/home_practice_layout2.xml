@@ -1,0 +1,2030 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+
+    >
+
+
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        >
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:visibility="gone"
+
+            android:layout_marginBottom="40dp">
+
+
+        </com.google.android.exoplayer2.ui.PlayerView>
+
+
+
+
+
+        <Button
+            android:id="@+id/video_close"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:text="Close Video"
+            android:textSize="24sp"
+            android:visibility="gone"
+
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:insetRight="0dp"
+            android:insetLeft="0dp"
+            android:background="@null">
+
+        </Button>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/stimp_instructions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+
+
+            android:alpha="1"
+            app:strokeWidth="4dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button2"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stimp Calculator Instructions:"
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:paddingHorizontal="4dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="26sp">
+
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. If there is a slope, putt up the slope first"
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/black"
+            android:paddingHorizontal="4dp"
+            android:layout_marginTop="24dp"
+            android:textSize="24sp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2. Putt a distance of about 15 ft.  Stimp #1 will be displayed."
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/black"
+            android:paddingHorizontal="4dp"
+            android:layout_marginTop="8dp"
+            android:textSize="24sp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3. Reset and putt down the slope for stimp #2."
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/black"
+            android:paddingHorizontal="4dp"
+            android:layout_marginTop="8dp"
+            android:textSize="24sp">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4. Slope-corrected stimp calculated from 1 and 2."
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/black"
+            android:paddingHorizontal="4dp"
+            android:layout_marginTop="8dp"
+            android:textSize="24sp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/stimp_instructions_dismiss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dismiss"
+            android:textColor="@android:color/black"
+            android:textAlignment="center"
+            android:layout_marginTop="100dp"
+            >
+
+        </Button>
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/stimp_measurements"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/BLACK"
+            android:layout_gravity="center_horizontal"
+            android:visibility="invisible"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+
+
+            android:alpha="1"
+            app:strokeWidth="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+
+                    android:background="@drawable/line">
+
+                </ImageView>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:background="@drawable/button2"
+                    android:elevation="0dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:text="Stimp Measurement"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="24sp"
+                        >
+
+                    </TextView>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:text="Stimp #1 (upslope):"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="24dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/upslope_stimp"
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="9.5"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/white"
+                        android:textSize="28sp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="24dp"
+                        tools:ignore="RtlCompat">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:text="Stimp #2 (downslope):"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/downslope_stimp"
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="11.0"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/white"
+                        android:textSize="28sp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        tools:ignore="RtlCompat">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:elevation="6dp"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+
+                        android:text="Slope-corrected stimp:"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="22sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/slope_corrected"
+                        android:layout_width="0dp"
+                        android:layout_weight=".4"
+                        android:layout_height="wrap_content"
+                        android:text="10.0"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/white"
+                        android:textSize="28sp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        tools:ignore="RtlCompat">
+
+                    </TextView>
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/stimp_remeasure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Measure Again"
+                    android:layout_marginTop="100dp"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingHorizontal="12dp"
+                    android:background="@drawable/buttonclear">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/stimp_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Close"
+                    android:layout_marginTop="24dp"
+                    android:textSize="22sp"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingHorizontal="12dp"
+                    android:background="@drawable/buttonclear">
+
+                </Button>
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+
+
+
+                <FrameLayout
+                    android:id="@+id/gridpoint_data"
+                    android:layout_width="160dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="100dp"
+                    android:layout_gravity="center"
+                    android:layout_height="220dp"
+                    android:background="@drawable/datapointbox">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="4dp">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+
+                           <TextView
+                               android:layout_width="0dp"
+                               android:layout_height="wrap_content"
+                               android:layout_weight="1"
+                               android:text="PUTT DATA"
+                               android:textSize="18sp"
+                               android:layout_marginBottom="8dp"
+                               android:textColor="@android:color/white">
+
+                           </TextView>
+
+
+                           <TextView
+                               android:id="@+id/popup_distance2"
+                               android:layout_width="0dp"
+                               android:layout_weight=".25"
+                               android:layout_height="wrap_content"
+                               android:textSize="12sp"
+                               android:text="close"
+                               android:layout_gravity="end"
+                               android:layout_marginBottom="8dp"
+                               android:textColor="@android:color/white">
+
+                           </TextView>
+
+
+
+
+                       </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Result:"
+                                android:textSize="18dp"
+                                android:textColor="@android:color/white">
+
+                            </TextView>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Distance:"
+                                android:textSize="18dp"
+                                android:textColor="@android:color/white">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Max Vel:"
+                                android:textSize="18dp"
+                                android:textColor="@android:color/white">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="True Roll:"
+                                android:textSize="18dp"
+                                android:visibility="gone"
+                                android:textColor="@android:color/white">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pace:"
+                                android:textSize="18dp"
+                                android:textColor="@android:color/white">
+
+                            </TextView>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Miss:"
+                                android:textSize="18dp"
+                                android:visibility="gone"
+                                android:textColor="@android:color/white">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Slope:"
+                                android:textSize="18dp"
+                                android:textColor="@android:color/white">
+
+                            </TextView>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Roll time:"
+                                android:textSize="18dp"
+                                android:textColor="@android:color/white">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight=".80"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_gravity="right">
+
+
+
+                                <TextView
+                                    android:id="@+id/popup_result"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="missed"
+                                    android:textSize="18dp"
+                                    android:textAlignment="viewEnd"
+
+                                    android:textColor="@android:color/white">
+
+                                </TextView>
+
+
+                                <TextView
+                                    android:id="@+id/popup_distance"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="25.0 ft"
+                                    android:textSize="18dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/white">
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/popup_max_velocity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="8.5 ft/s"
+                                    android:textSize="18dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/white">
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/popup_true_roll"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="True Roll:"
+                                    android:textSize="18dp"
+                                    android:visibility="gone"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/white">
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/popup_pace"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Firm"
+                                    android:textSize="18dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/white">
+
+                                </TextView>
+
+
+                                <TextView
+                                    android:id="@+id/popup_miss"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="left"
+                                    android:visibility="gone"
+                                    android:textSize="18dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/white">
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/popup_slope"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="R to L"
+                                    android:textSize="18dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/white">
+
+                                </TextView>
+
+
+                                <TextView
+                                    android:id="@+id/popup_roll_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="2.4 s"
+                                    android:textSize="18dp"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/white">
+
+                                </TextView>
+
+
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/putt_video_play"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@drawable/ic_baseline_videocam_24"
+                            android:layout_gravity="center_horizontal">
+
+                        </Button>
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical"
+                    android:background="@drawable/button3">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:background="@drawable/line">
+
+                    </ImageView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/data_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+                        <LinearLayout
+
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginHorizontal="8dp"
+                        android:orientation="horizontal">
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="40dp"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginHorizontal="12dp"
+
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Putt Map Session #"
+                                android:textAlignment="viewStart"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:paddingRight="0dp"
+                                android:layout_marginRight="8dp"
+                                android:textSize="20sp"
+                                android:textColor="@android:color/white"
+
+
+                                tools:ignore="RtlCompat">
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/putt_plot_session"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".1"
+                                android:text="13"
+                                android:visibility="gone"
+                                android:paddingRight="4dp"
+                                android:textSize="20sp"
+                                android:textColor="@android:color/white"
+                                android:textAlignment="viewEnd">
+
+                            </TextView>
+
+
+                            <Button
+                                android:layout_width="40dp"
+                                android:visibility="gone"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/dropdown_arrow">
+
+                            </Button>
+
+                            <Spinner
+                                android:id="@+id/spinner1"
+                                android:layout_width="0dp"
+                                android:layout_weight=".5"
+                                android:layout_height="40dp"
+                                android:elevation="8dp"
+                                android:layout_marginLeft="0dp"
+                                android:popupBackground="@color/BLACK"
+                                android:backgroundTint="@android:color/white"
+                                >
+
+
+                            </Spinner>
+
+
+                        </LinearLayout>
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:visibility="gone"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:orientation="horizontal"
+
+                            android:background="@drawable/buttontransparent">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Score:"
+                                android:textAlignment="viewStart"
+                                android:textSize="18sp"
+                                android:paddingLeft="4dp"
+                                android:textColor="@android:color/white"
+
+
+                                >
+
+                            </TextView>
+
+                            <TextView
+                                android:id="@+id/home_score1"
+                                android:layout_width="0dp"
+                                android:layout_height="40dp"
+                                android:layout_weight=".3"
+                                android:text="0"
+                                android:paddingRight="4dp"
+                                android:textSize="20sp"
+                                android:background="@android:color/holo_red_dark"
+                                android:textColor="@android:color/white"
+                                android:textAlignment="viewEnd">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                    <Button
+                        android:id="@+id/putt_plot_back"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        android:background="@drawable/forward_arrow"
+                        android:layout_marginRight="4dp"
+                        android:rotation="180">
+
+                    </Button>
+
+                    <Button
+                        android:id="@+id/putt_plot_forward"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        android:background="@drawable/forward_arrow"
+                        android:layout_marginLeft="4dp">
+                    </Button>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center_horizontal"
+                        >
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/madeputtspot">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="Made Putt"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="24dp"
+                            android:src="@drawable/missedputtspot">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:text="Missed Putt"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <FrameLayout
+                    android:id="@+id/parentgrid"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="50dp"
+                    android:translationX="170dp">
+
+
+
+
+
+                </FrameLayout>
+
+
+
+                <FrameLayout
+                    android:id="@+id/grid"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="50dp"
+                    android:translationX="170dp">
+
+
+
+
+
+                </FrameLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/targetprogressbars"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="135dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="0dp"
+                    android:paddingTop="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginBottom="50dp"
+                    >
+
+
+
+
+
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/data_column"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:paddingTop="0dp"
+
+                    android:paddingRight="0dp"
+                    android:layout_marginBottom="0dp"
+
+
+                    android:layout_alignParentLeft="true"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="vertical"
+                        android:layout_marginTop="0dp">
+
+
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="Distance"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/headerbar"
+                            android:layout_marginTop="0dp">
+
+                        </TextView>
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="@drawable/line">
+
+                        </ImageView>
+
+
+
+                        <TextView
+                            android:id="@+id/roll_distance_practice"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="28.8"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button3"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="22sp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginTop="0dp"
+
+
+
+
+                            >
+
+                        </TextView>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        android:layout_marginTop="10dp">
+
+
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="Velocity"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:background="@drawable/headerbar"
+                            android:layout_marginTop="0dp">
+
+                        </TextView>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="@drawable/line">
+
+                        </ImageView>
+
+
+
+                        <TextView
+                            android:id="@+id/home_velocity"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="3.5"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button3"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="22sp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginTop="0dp"
+
+
+
+
+                            >
+
+                        </TextView>
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        android:layout_marginTop="10dp">
+
+
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="Skip"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:background="@drawable/headerbar"
+                            android:layout_marginTop="0dp">
+
+                        </TextView>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="@drawable/line">
+
+                        </ImageView>
+
+
+
+                        <TextView
+                            android:id="@+id/home_skip"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="1.5"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/button3"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="22sp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginTop="0dp">
+
+                        </TextView>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp">
+
+
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="Roll time"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:background="@drawable/headerbar"
+                            android:layout_marginTop="0dp">
+
+                        </TextView>
+
+
+
+                        <TextView
+                            android:id="@+id/roll_time"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:text="1.2"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/buttontransparent"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="0dp"
+                            android:textSize="22sp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginTop="0dp"
+
+
+
+
+                            >
+
+                        </TextView>
+
+
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        android:layout_marginTop="10dp">
+
+
+
+                        <TextView
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:text="Stimp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:background="@drawable/headerbar"
+                            android:layout_marginTop="0dp">
+
+                        </TextView>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="@drawable/line">
+
+                        </ImageView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@drawable/button3"
+                            android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/stimp"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="wrap_content"
+                            android:text="Enter"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="4dp"
+                            android:paddingVertical="4dp"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginTop="0dp"
+
+
+
+
+                            >
+
+                        </TextView>
+
+                            <Spinner
+                                android:id="@+id/spinner3"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.25"
+                                android:layout_height="40dp"
+                                android:elevation="8dp"
+                                android:layout_marginLeft="0dp"
+                                android:popupBackground="@color/BLACK"
+                                android:backgroundTint="@android:color/white"
+                                >
+
+
+                            </Spinner>
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        android:layout_marginTop="10dp">
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Slope"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:background="@drawable/headerbar"
+                            android:layout_marginTop="0dp">
+
+                        </TextView>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="@drawable/line">
+
+                        </ImageView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:background="@drawable/button3">
+
+
+
+
+                        <TextView
+                            android:id="@+id/slope"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_height="wrap_content"
+
+                            android:text="Enter"
+
+                            android:layout_gravity="center_vertical"
+
+
+                            android:layout_marginLeft="4dp"
+                            android:paddingVertical="4dp"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/white"
+                            android:layout_marginTop="0dp"
+
+                            >
+
+                        </TextView>
+
+
+                        <Spinner
+                            android:id="@+id/spinner2"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.25"
+                            android:layout_height="40dp"
+                            android:elevation="8dp"
+                            android:popupBackground="@color/BLACK"
+                            android:layout_marginLeft="0dp"
+
+                            android:backgroundTint="@android:color/white"
+                            >
+
+
+                        </Spinner>
+
+
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+
+
+                    <LinearLayout
+                        android:id="@+id/roll_data_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="0dp"
+
+                        >
+
+
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/headerbar"
+                            android:text="Range:"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginLeft="0dp">
+
+                        </TextView>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="4dp"
+                            android:background="@drawable/line">
+
+                        </ImageView>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/button3"
+                            android:paddingVertical="0dp"
+                            android:layout_marginLeft="0dp"
+
+
+                            >
+
+                            <TextView
+                                android:id="@+id/distance_target"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.25"
+                                android:layout_height="wrap_content"
+
+                                android:text="--"
+                                android:textAlignment="viewStart"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp"
+
+                                android:paddingVertical="10dp"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginRight="0dp"
+                                android:paddingLeft="0dp"
+                                android:layout_marginLeft="4dp"
+                                android:paddingTop="0dp"
+                                android:translationY="0dp"
+                                android:translationX="0dp">
+
+                            </TextView>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.25"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/white"
+                                android:text="to"
+
+                                android:layout_marginLeft="4dp"
+                                android:paddingVertical="10dp"
+                                android:textAlignment="center"
+                                android:textSize="14sp">
+
+                            </TextView>
+
+
+                            <TextView
+                                android:id="@+id/distance_target2"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.25"
+                                android:layout_height="wrap_content"
+                                android:text="--"
+
+                                android:paddingVertical="10dp"
+                                android:paddingLeft="0dp"
+                                android:layout_marginLeft="4dp"
+                                android:textAlignment="viewStart"
+                                android:textColor="@android:color/white"
+                                android:textSize="18sp"
+                                android:layout_marginTop="0dp"
+
+
+                                android:paddingTop="0dp"
+                                android:translationY="0dp"
+                                android:translationX="0dp">
+
+                            </TextView>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="0.25"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="0dp"
+                                android:paddingLeft="0dp"
+
+                                >
+
+                                <TextView
+                                    android:id="@+id/increase_distance_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:text="+"
+
+                                    android:layout_marginBottom="4dp"
+                                    android:textColor="@android:color/white"
+                                    android:textAlignment="center">
+
+                                </TextView>
+
+                                <TextView
+                                    android:id="@+id/decrease_distance_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="15dp"
+                                    android:text="-"
+
+                                    android:textColor="@android:color/white"
+                                    android:textAlignment="center"
+                                    >
+
+                                </TextView>
+
+
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+
+                        <ToggleButton
+                            android:id="@+id/record_button"
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_gravity="bottom"
+                            android:background="@drawable/ic_baseline_videocam_24"
+                            android:backgroundTint="@android:color/holo_red_dark"
+                            android:alpha="1"
+                            android:textSize="12sp">
+
+
+                        </ToggleButton>
+
+
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Velocity:"
+                            android:visibility="gone"
+                            android:textSize="18sp"
+                            android:layout_marginTop="16dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/make_percentage_avg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0.0 ft/s"
+                            android:visibility="gone"
+                            android:textColor="@android:color/white"
+                            android:textSize="36sp"
+                            android:textAlignment="viewStart"
+                            android:layout_marginLeft="16dp"
+                            >
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Roll Time:"
+                            android:textSize="18sp"
+                            android:visibility="gone"
+                            android:layout_marginTop="16dp">
+
+                        </TextView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1.8 sec"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:visibility="gone"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="16dp"
+                            >
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="0dp"
+                            android:visibility="visible"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/decrease_distance_button1"
+                                android:layout_width="15dp"
+                                android:layout_height="13dp"
+                                android:visibility="gone"
+
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/forward_arrow"
+                                android:rotation="180">
+
+                            </Button>
+
+                            <Button
+                                android:id="@+id/increase_distance_button1"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:visibility="gone"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="0dp"
+                                android:background="@drawable/forward_arrow"
+                                android:rotation="0">
+
+                            </Button>
+
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent" >
+
+
+                </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/target_distance_progress_bar"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:alpha="1"
+
+                        android:visibility="invisible"
+                        android:paddingTop="25dp"
+                        android:paddingBottom="0dp"
+                         android:max="25"
+                        android:min="0"
+                        android:indeterminateOnly="false"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progress_bar_vertical"
+                        android:translationX="0dp"
+                        android:translationY="0dp"
+                        >
+
+                    </ProgressBar>
+
+
+                    <ImageView
+                        android:id="@+id/distance_bar_hole"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/hole_black"
+                        android:translationX="30dp"
+                        android:elevation="0dp"
+                        android:translationY="0dp"
+
+                        app:tint="@android:color/black"
+                        >
+
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/distance_bar_cup"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/golf_hole"
+                        android:elevation="0dp"
+                        android:translationX="0dp"
+                        android:translationY="0dp"
+                        >
+
+                    </ImageView>
+
+
+                    <ImageView
+                        android:id="@+id/golfball"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/golfball"
+                        android:elevation="0dp"
+                        android:translationX="-25dp"
+                        android:translationY="5dp">
+
+                    </ImageView>
+
+
+
+                    <ProgressBar
+                        android:id="@+id/actual_distance_progress_bar2"
+                        android:layout_width="100dp"
+                        android:visibility="visible"
+                        android:layout_height="match_parent"
+                        android:max="25"
+                        android:min="0"
+
+                        android:indeterminateOnly="false"
+                        android:progress="0"
+                        android:secondaryProgress="0"
+                        android:translationX="-70dp"
+                        android:paddingTop="0dp"
+                        android:paddingBottom="0dp"
+
+                        android:progressDrawable="@drawable/roll_distance_bar_vertical">
+
+                    </ProgressBar>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ready"
+                android:paddingHorizontal="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+
+                android:layout_above="@id/bottom_bar"
+                android:background="#00FF00"
+                android:layout_alignParentLeft="true"
+                >
+
+            </TextView>
+
+
+            <LinearLayout
+                android:id="@+id/bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical"
+                android:background="@drawable/button3"
+                android:layout_marginLeft="0dp"
+                android:layout_alignParentBottom="true">
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+
+                android:background="@drawable/button3"
+                android:layout_marginLeft="0dp"
+                >
+
+
+
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_weight="1"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginRight="0dp"
+                android:background="@android:color/transparent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Made/Atts:"
+                    android:textAlignment="viewStart"
+                    android:paddingLeft="10dp"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+
+
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/home_made_attempt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".6"
+                    android:text="0/0"
+                    android:paddingRight="4dp"
+
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="viewStart">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_weight=".5"
+                android:layout_height="30dp"
+                android:layout_marginLeft="0dp"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginRight="4dp"
+                android:background="@android:color/transparent">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Score:"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    android:paddingLeft="36dp"
+                    android:textColor="@android:color/white"
+
+
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/home_score"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".4"
+                    android:text="0"
+                    android:paddingRight="0dp"
+                    android:textSize="20sp"
+                    android:background="@android:color/holo_red_dark"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@drawable/line">
+
+            </ImageView>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:rotation="270"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="20dp"
+                >
+
+
+
+
+                <TextView
+                    android:id="@+id/progressbarzero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:visibility="visible"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/roll_bar_distance_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:background="@drawable/headerbar"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+
+                    android:layout_marginHorizontal="20dp"
+                    android:paddingHorizontal="10dp">
+
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/progressbarthirty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30"
+                    android:visibility="gone"
+                    android:layout_gravity="end"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+
+                    android:layout_marginRight="20dp">
+
+                </TextView>
+
+
+
+
+        <ProgressBar
+            android:id="@+id/actual_distance_progress_bar"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="30dp"
+            android:max="30"
+            android:min="0"
+            android:alpha="0.5"
+
+            android:indeterminateOnly="false"
+            android:progress="0"
+            android:secondaryProgress="0"
+            android:translationX="0dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:progressDrawable="@drawable/progress_bar_horizontal2"
+
+            >
+
+        </ProgressBar>
+
+        <ImageView
+            android:id="@+id/distance_line"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:src="@drawable/line"
+            android:rotation="90"
+            android:layout_gravity="bottom"
+            android:translationX="40dp">
+
+        </ImageView>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/line"
+            android:visibility="gone"
+            android:rotation="90"
+            android:layout_gravity="bottom"
+            android:translationX="220dp"
+            >
+
+        </ImageView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make Percentage"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:textAlignment="center">
+
+        </TextView>
+
+
+        </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>

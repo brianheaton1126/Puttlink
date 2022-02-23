@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+
+
+
+
+    <solid
+
+        android:color="@android:color/white">
+
+    </solid>
+
+
+    <padding
+        android:bottom="0dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+    <stroke
+
+        android:width="2dp"
+        android:color="@color/BLACK"
+
+        />
+    <!--android:dashGap="1dp"
+    android:dashWidth="4dp"-->
+
+
+
+</shape>
+
+

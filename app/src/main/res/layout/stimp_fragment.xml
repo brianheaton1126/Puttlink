@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="50dp"
+    android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+
+    >
+
+    <FrameLayout
+        android:id="@+id/stimp_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+
+        android:orientation="vertical"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+         <LinearLayout
+                    android:id="@+id/data_column"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="105dp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:paddingTop="0dp"
+
+                    android:paddingRight="0dp"
+                    android:layout_marginBottom="0dp"
+
+
+                    android:layout_alignParentLeft="true"
+
+                    >
+
+
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Set Range:"
+                        android:textSize="18sp"
+                        android:visibility="invisible"
+                        android:layout_marginLeft="30dp">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:visibility="invisible"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="30dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/distance_target"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="40sp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="0dp"
+                            android:paddingTop="0dp"
+                            android:translationY="0dp"
+                            android:translationX="0dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight=".5"
+                            android:text="to"
+                            android:textAlignment="center"
+                            android:textSize="24sp">
+
+                        </TextView>
+
+
+                        <TextView
+                            android:id="@+id/distance_target2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="5"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="40sp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginRight="0dp"
+                            android:paddingTop="0dp"
+                            android:translationY="0dp"
+                            android:translationX="0dp">
+
+                        </TextView>
+
+
+
+
+                    </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="invisible"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="30dp">
+
+                        <Button
+                            android:id="@+id/increase_distance_button"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/forward_arrow"
+                            android:rotation="270">
+
+                        </Button>
+
+                        <Button
+                            android:id="@+id/decrease_distance_button"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="0dp"
+                            android:rotation="90"
+                            android:background="@drawable/forward_arrow">
+
+                        </Button>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Make Avg:"
+                        android:textSize="18sp"
+                        android:visibility="invisible"
+                        android:layout_marginTop="30dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/make_percentage_avg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="35%"
+                        android:visibility="invisible"
+                        android:textAlignment="viewStart"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="40sp"
+                        android:textColor="@android:color/white"
+                        android:layout_marginTop="10dp"
+
+                        >
+
+                    </TextView>
+
+
+
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="bottom"
+                        >
+
+                    <LinearLayout
+                        android:id="@+id/roll_data_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="0dp"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Roll Distance:"
+                            android:textSize="18sp"
+
+                            android:layout_marginTop="0dp"
+                            android:layout_gravity="left">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/roll_distance_practice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3.0 ft"
+                            android:textAlignment="viewStart"
+                            android:layout_marginLeft="0dp"
+                            android:paddingLeft="18dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="42sp"
+
+
+                            >
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Velocity:"
+                            android:textSize="18sp"
+                            android:layout_marginTop="16dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/home_velocity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0.0 ft/s"
+                            android:textColor="@android:color/white"
+                            android:textSize="36sp"
+                            android:textAlignment="viewStart"
+                            android:layout_marginLeft="16dp"
+                            >
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Roll Time:"
+                            android:textSize="18sp"
+                            android:visibility="gone"
+                            android:layout_marginTop="16dp">
+
+                        </TextView>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1.8 sec"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:visibility="gone"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="16dp"
+                            >
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    </FrameLayout>
+
+         </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/stimp_instructions"
+        android:layout_width="320dp"
+        android:layout_height="380dp"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+
+
+        android:alpha="1"
+        app:strokeWidth="4dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button2"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instructions:"
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:paddingHorizontal="4dp"
+                android:textSize="24sp">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. If there is a slope, putt up the slope first"
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/black"
+                android:paddingHorizontal="4dp"
+                android:layout_marginTop="8dp"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Putt a distance of about 15 ft.  Stimp #1 will be displayed."
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/black"
+                android:paddingHorizontal="4dp"
+                android:layout_marginTop="8dp"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Reset and putt down the slope for stimp #2."
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/black"
+                android:paddingHorizontal="4dp"
+                android:layout_marginTop="8dp"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Slope-corrected stimp calculated from 1 and 2."
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/black"
+                android:paddingHorizontal="4dp"
+                android:layout_marginTop="8dp"
+                android:textSize="24sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/stimp_instructions_dismiss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dismiss"
+                android:textColor="@android:color/black"
+                android:textAlignment="center"
+                android:layout_marginTop="12dp"
+                >
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/upslope_stimp_card"
+        android:layout_width="320dp"
+        android:layout_height="380dp"
+        app:cardBackgroundColor="@color/BLACK"
+        android:layout_gravity="center_horizontal"
+        android:visibility="visible"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+
+
+        android:alpha="1"
+        app:strokeWidth="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@drawable/button2"
+            android:elevation="6dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                android:text="Stimp Measurements"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                >
+
+            </TextView>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:elevation="6dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:text="Stimp #1 (upslope):"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/upslope_stimp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="24dp"
+                    tools:ignore="RtlCompat">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:elevation="6dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:text="Stimp #2 (downslope):"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/downslope_stimp"
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="8dp"
+                    tools:ignore="RtlCompat">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:elevation="6dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:text="Slope corrected stimp:"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/slope_corrected"
+                    android:layout_width="0dp"
+                    android:layout_weight=".4"
+                    android:layout_height="wrap_content"
+                    android:text="0.0"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="8dp"
+                    tools:ignore="RtlCompat">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/stimp_remeasure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Measure Again"
+                android:layout_marginTop="40dp"
+                android:textSize="22sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_horizontal"
+                android:paddingHorizontal="12dp"
+                android:background="@drawable/buttonclear">
+
+            </Button>
+
+            <Button
+                android:id="@+id/stimpe_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Close"
+                android:layout_marginTop="24dp"
+                android:textSize="22sp"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center_horizontal"
+                android:paddingHorizontal="12dp"
+                android:background="@drawable/buttonclear">
+
+            </Button>
+
+
+        </LinearLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    </LinearLayout>
+
+    </FrameLayout>
+
+
+
+
+</RelativeLayout>

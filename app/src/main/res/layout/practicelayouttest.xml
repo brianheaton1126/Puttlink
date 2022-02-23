@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+
+    android:background="@drawable/greenbackground2">
+
+
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/Display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:elevation="4dp"
+        />
+
+
+
+
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+
+        android:background="@drawable/button3"
+
+        android:orientation="vertical">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/nav_view_practice"
+            android:layout_below="@+id/my_toolbar_practice">
+
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="6dp"
+                android:text="48%"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="72sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/card_one"
+                app:layout_constraintEnd_toEndOf="@+id/card_one"
+                app:layout_constraintStart_toStartOf="@+id/card_one"
+                app:layout_constraintTop_toTopOf="@+id/card_one">
+
+            </TextView>
+
+
+
+
+
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_one"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:cardBackgroundColor="@android:color/black"
+                android:layout_marginEnd="12dp"
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:orientation="vertical">
+
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:elevation="6dp"
+                android:text="MAKE %"
+                android:textColor="@android:color/background_dark"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/card_one"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/card_one">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:elevation="6dp"
+                android:text="GOAL: 45%"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/card_one"
+                app:layout_constraintEnd_toEndOf="@+id/card_one"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/roll_distance_practice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="12.5"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="72sp"
+                android:textStyle="bold"
+                android:elevation="5dp"
+                android:layout_marginRight="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/card_two"
+                app:layout_constraintEnd_toEndOf="@+id/card_two"
+                app:layout_constraintStart_toStartOf="@+id/card_two"
+                app:layout_constraintTop_toTopOf="@+id/card_two">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:elevation="6dp"
+                android:text="FT"
+                android:layout_marginRight="8dp"
+                android:textColor="@android:color/background_dark"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/card_two"
+                app:layout_constraintEnd_toEndOf="@+id/card_two"
+                app:layout_constraintTop_toTopOf="@+id/card_two">
+
+            </TextView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_three"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginRight="12dp"
+                app:cardBackgroundColor="@android:color/background_dark"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
+                android:alpha="1"
+                app:strokeWidth="4dp"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button2">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+
+                        android:orientation="vertical">
+
+
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="GOAL: 2\u00B0"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="24sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/contact_angle_practice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="2.0\u00B0"
+                            android:elevation="6dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="24dp"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="56sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/contact_direction_practice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="R"
+                            android:layout_toEndOf="@id/contact_angle_practice"
+                            android:paddingLeft="8dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="56sp">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                </Button>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_two"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+
+                app:cardBackgroundColor="@android:color/background_dark"
+                android:layout_marginStart="12dp"
+
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+
+                android:alpha="1"
+                app:strokeWidth="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button2"/>
+
+
+
+
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="DISTANCE"
+                android:elevation="6dp"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/card_two"
+                app:layout_constraintStart_toStartOf="@+id/card_two"
+                app:layout_constraintTop_toTopOf="@+id/card_two">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="GOAL: 12 FT"
+                android:elevation="6dp"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/card_two"
+                app:layout_constraintEnd_toEndOf="@+id/card_two"
+                app:layout_constraintStart_toStartOf="@+id/card_two">
+
+            </TextView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_four"
+
+                android:layout_width="180dp"
+
+
+                android:layout_height="180dp"
+                android:layout_marginLeft="12dp"
+                app:cardBackgroundColor="@android:color/background_dark"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline1"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
+
+                android:alpha="1">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="ENTRY SPEED"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="GOAL: 2 MPH"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/enter_speed_value_practice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="2.5"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="36dp"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="56sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="MPH"
+                        android:layout_marginRight="8dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="20sp">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_five"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                app:cardBackgroundColor="@android:color/background_dark"
+                android:layout_marginStart="12dp"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/guideline1"
+                app:layout_constraintVertical_bias="0.0"
+                app:strokeColor="@android:color/holo_green_light"
+                app:strokeWidth="4dp"
+                android:alpha="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="# MADE"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="32sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="GOAL: 50"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="24sp">
+
+                    </TextView>
+
+
+
+                    <TextView
+                        android:id="@+id/Velocity_practice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="30"
+                        android:layout_centerInParent="true"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="56sp">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_six"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginRight="12dp"
+                app:cardBackgroundColor="@android:color/background_dark"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="@+id/guideline1"
+                app:layout_constraintVertical_bias="0.0"
+                app:strokeColor="@android:color/background_dark"
+                app:strokeWidth="4dp"
+                android:alpha="1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="TRUE ROLL"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="28sp"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="GOAL: 90%"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="24sp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="85 %"
+                        android:textAlignment="center"
+                        android:layout_centerInParent="true"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="56sp">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.33" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.66" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
